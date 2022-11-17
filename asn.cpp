@@ -418,6 +418,7 @@ void EncodedObjectFilter::Put(const byte *inString, size_t length)
 			m_queue.TransferTo(CurrentTarget(), 1);
 			m_state = LENGTH;
 		// fall through
+		[[fallthrough]];
 		case LENGTH:
 		{
 			byte b;
@@ -446,12 +447,14 @@ void EncodedObjectFilter::Put(const byte *inString, size_t length)
 			m_state = BODY;
 		}
 		// fall through
+		[[fallthrough]];
 		case BODY:
 			m_lengthRemaining -= m_queue.TransferTo(CurrentTarget(), m_lengthRemaining);
 
 			if (m_lengthRemaining == 0)
 				m_state = IDENTIFIER;
 		// fall through
+		[[fallthrough]];
 		case TAIL:
 		case ALL_DONE:
 		default: ;
