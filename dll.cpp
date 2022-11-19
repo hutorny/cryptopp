@@ -6,8 +6,8 @@
 #include "dll.h"
 #include "config.h"
 #include "iterhash.h"
-#include "pkcspad.h"
-#include "emsa2.h"
+//#include "pkcspad.h"
+//#include "emsa2.h"
 
 #if defined(CRYPTOPP_MSC_VERSION)
 // Cast from FARPROC to funcptr with args, http://stackoverflow.com/q/4192058/608639
