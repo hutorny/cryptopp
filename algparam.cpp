@@ -70,10 +70,6 @@ bool AlgorithmParameters::GetVoidValue(const char *name, const std::type_info &v
 		return false;
 }
 
-template class AlgorithmParametersTemplate<bool>;
-template class AlgorithmParametersTemplate<int>;
-template class AlgorithmParametersTemplate<ConstByteArrayParameter>;
-
 NAMESPACE_END
 
 #endif

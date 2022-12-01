@@ -336,9 +336,6 @@ void AbstractRing<T>::SimultaneousExponentiate(T *results, const T &base, const 
 	MultiplicativeGroup().AbstractGroup<T>::SimultaneousMultiply(results, base, exponents, expCount);
 }
 
-template class AbstractRing<Integer>;
-template class AbstractGroup<Integer>;
-template class AbstractEuclideanDomain<Integer>;
 NAMESPACE_END
 
 #endif
